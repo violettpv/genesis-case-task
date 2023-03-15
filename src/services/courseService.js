@@ -10,3 +10,12 @@ export const getCourses = async (token) => {
     });
     return response.data;
 }
+
+export const getCourse = async (token, id) => {
+    const response = await axios.get(`${baseURL}/${id}`, {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+    });
+    return response.data;
+}

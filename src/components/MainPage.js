@@ -4,6 +4,7 @@ import { getToken } from "../services/authService";
 import { getCourses } from "../services/courseService";
 import CourseCard from "./CourseCard";
 import Header from './Header';
+import Loader from './Loader';
 
 function MainPage() {
     const nowDate = new Date();
@@ -22,6 +23,8 @@ function MainPage() {
     const decrementPage = () => {
         if(page > 1) setPage(page - 1);
     }
+
+    if(courses.length === 0) return <div><Header/><Loader/></div>;
 
   return (
     <div className="App">

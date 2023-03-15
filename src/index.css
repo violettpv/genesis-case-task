@@ -11,6 +11,7 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
 #far-icon {
   font-size: 22px;
 }
@@ -29,6 +30,35 @@ code {
   font-weight: bold;
   font-size: 22px;
 }
+
+.loading-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(211, 236, 245);
+  overflow: hidden;
+  position: fixed;
+}
+.loading-box__circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+  border-top: 5px solid cadetblue;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 #available-crs {
   color: rgb(13, 51, 52);
   font-weight: bold;
@@ -38,7 +68,6 @@ code {
   padding-left: 20px;
 }
 
-/* Card CSS */
 .courses {
   overflow: hidden;
   width: 100%;
@@ -130,3 +159,132 @@ code {
   cursor: pointer;
 }
 
+.course-page-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+}
+.course-page-box {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 3px #a3a3a3;
+  display: flex;
+  flex-direction: column;
+  
+  background-color: whitesmoke;
+  overflow: hidden;
+  padding: 10px 20px;
+}
+.course-title {
+  margin: 15px 0;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(13, 51, 52);
+}
+
+.course-page-box-top {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+}
+.course-description {
+  margin: 8px 0;
+  font-size: 18px;
+}
+.course-page-box-top__right-img-box {
+  height: 100%;
+  width: 600px;
+  border-radius: 5px;
+}
+.course-page-box-top__right-img {
+  height: auto;
+  width: 100%;
+  border-radius: 5px;
+}
+.course-page-box-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+}
+.course-page-box__video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+#hr-lessons {
+  border-top: 1px solid black;
+  width: 100%;
+}
+.course-page-box__lessons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.course-page-box__lessons-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 290px;
+  height: fit-content;
+  min-height: 180px;
+  margin: 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px #ccc;
+  background-color: #fff;
+}
+.course-page-box__lessons-card-title {
+  margin: 5px 0;
+}
+.course-page-box__lessons-card-description {
+  margin: 5px 0;
+}
+.lesson-img-box {
+  height: auto;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #ccc;
+  text-align: center;
+}
+
+.lesson-video-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(173, 216, 230, 0.5);
+}
+
+.locked-course {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  background-color: #d08a8a;
+  border-radius: 50px;
+  padding: 20px;
+}

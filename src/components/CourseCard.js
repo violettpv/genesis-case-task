@@ -16,7 +16,7 @@ function CourseCard({course}) {
             <p><i>Ratings:</i> {course.rating}</p>
         </div>
         <div className="course-lessons">
-            <Link to={`/course/${course.id}`}>
+            <Link to={`/${course.id}`}>
                 <button className='course-lessons__more'>Get more info</button>
            </Link>
         </div>
