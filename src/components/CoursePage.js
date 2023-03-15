@@ -31,9 +31,9 @@ function CoursePage() {
                 <div className="course-page-box-top">
                     <div className="course-page-box-top__left">
                         <p className='course-description'>{courseData.description}</p>
-                        <p className='course-description'>Duration: {courseData.duration} minutes</p>
-                        <p className='course-description'>Rating: {courseData.rating}</p>
-                        <p className='course-description'>Tags: #{courseData.tags.join(", ")}</p>
+                        <p className='course-description'><i>Duration:</i>  {courseData.duration} minutes</p>
+                        <p className='course-description'><i>Rating:</i>  {courseData.rating}</p>
+                        <p className='course-description'><i>Tags:</i>  #{courseData.tags.join(", ")}</p>
                     </div>
                     <div className="course-page-box-right">
                         <div className="course-page-box-top__right-img-box">
