@@ -4,7 +4,7 @@ function CourseCard({course}) {
   return (
     <div className='course-card'>
         <div className='course-img'>
-            <img src={`${course.previewImageLink}`} alt="course" />
+            <img src={`${course.previewImageLink}/cover.webp`} alt="course" />
         </div>
         <div className='course-info'>
             <h4 className='course-info__title'>{course.title}</h4>

@@ -7,7 +7,7 @@ import CourseCard from "./components/CourseCard";
 
 function App() {
     const nowDate = new Date();
-    const page = 1;
+    const [page, setPage] = useState(1);
     const [courses, setCourses] = useState([]);
 
     useEffect(() => {
@@ -15,6 +15,13 @@ function App() {
         .then((token) => getCourses(token))
         .then((data) => setCourses(data.courses));
     }, []);
+
+    function incrementPage() {
+        setPage(page + 1);
+    }
+    function decrementPage() {
+        setPage(page - 1);
+    }
 
     return (
         <div className="App">
@@ -32,8 +39,8 @@ function App() {
             </div>
 
             <div className="page-btn">
-                <button className="page-btn__prev">Prev</button>
-                <button className="page-btn__next">Next</button>
+                <button className="page-btn__prev" onClick={()=>{decrementPage()}}>Prev</button>
+                <button className="page-btn__next" onClick={()=>{incrementPage()}}>Next</button>
             </div>
         </div>
     );
