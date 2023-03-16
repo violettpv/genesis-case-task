@@ -29,6 +29,11 @@ code {
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
   font-size: 22px;
+  text-decoration: none;
+}
+.header a, .header a:link, .header a:visited, .header a:hover, .header a:active {
+  text-decoration: none;
+  color: white;
 }
 
 .loading-box {
@@ -235,7 +240,6 @@ code {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* align-items: center; */
   justify-content: center;
   height: 100%;
   width: 100%;
@@ -246,7 +250,7 @@ code {
   justify-content: center;
   width: 290px;
   height: fit-content;
-  min-height: 180px;
+  min-height: 200px;
   margin: 5px;
   padding: 5px 10px;
   border: 1px solid #ccc;
@@ -283,8 +287,18 @@ code {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  background-color: #d08a8a;
-  border-radius: 50px;
-  padding: 20px;
+  font-size: 36px;
+}
+
+.lesson-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.hr-lessons-video {
+  border-top: 1px solid black;
+  width: 100%;
 }

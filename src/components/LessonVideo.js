@@ -1,12 +1,16 @@
 import React from 'react';
 
-function LessonVideo() {
+function LessonVideo({ title, url, func }) {
   return (
-    <div className='lesson-video-box'>
-        <video width="600" height="auto" controls>
-            <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4"/>
+    <>
+    <div className='lesson-video'>
+        <hr id="hr-lessons"></hr>
+        <p><i>You are watching:</i> <span><strong>{title}</strong></span></p> 
+        <video width="600" height="auto" controls preload="auto" data-setup="{}">
+            <source src={`${url}`} type="application/x-mpegURL"/>
         </video>
     </div>
+    </>
   );
 }
 
